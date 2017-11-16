@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>ARE YOU SURE YOU WANT TO DELETE THE FOLLOWING COURSE?</h1>
+    <p>Name: {{ Q.name }}</p>
+    <p>Descriptions: {{ Q.description}}</p>
+
+    <form action="returns">
+        <input type="submit" value="No">
+    </form>
+    <form action="{{Q.id}}/delete">
+        <input type="submit" value="Yes! I want to delete this!">
+    </form>
+    
+</body>
+</html>
